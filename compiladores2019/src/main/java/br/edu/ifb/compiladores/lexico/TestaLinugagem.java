@@ -15,7 +15,7 @@ public class TestaLinugagem {
                 " valor1 := 10;\n" +
                 "end. \n";
 
-        Lexico lexical = new Lexico(new StringReader(expr));
-        lexical.yylex();
+        //Lexico lexical = new Lexico(new StringReader(expr));
+        //lexical.yylex();
     }
 }
