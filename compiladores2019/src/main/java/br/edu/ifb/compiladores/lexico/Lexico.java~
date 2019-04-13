@@ -276,7 +276,7 @@ private void print(String name, String value, Integer line, Integer column)    {
     //System.out.println( value + "\t|\t" + line + " " + column + "\t|\t" + name);
     System.out.print(line + " ");
     System.out.print(column + " ");
-    System.out.print(name + "\n\n");
+    System.out.print(name + "\t\t");
     System.out.println(value);
 }
 

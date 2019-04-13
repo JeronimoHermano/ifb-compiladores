@@ -52,4 +52,4 @@ program = "program"
 {ADD}           { print("realcionais      ", yytext(), yyline, yycolumn); }
 {MUL}           { print("realcionais      ", yytext(), yyline, yycolumn); }
 
-. { throw new RuntimeException("Caractere inválido " + yytext() + " na linha " + yyline + ", coluna " +yycolumn); }
+.               { print("simbolo desconhecido", yytext(), yyline, yycolumn); }
