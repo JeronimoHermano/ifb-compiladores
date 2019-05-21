@@ -4,10 +4,15 @@ Trabalho para a disciplina de Compiladores do curso de Ciência da Computação,
 
 ## Ferramentas utilizadas
 - Linguagem de programação: Java
-- JFlex: framework utilizado para construção do analizador léxico.
-- Java Cup: framework que será utilizado para construção do analizador sintático.
+- Java Flex (JFlex): framework utilizado para construção do analizador léxico.
+- Java Cup (JCup): framework que será utilizado para construção do analizador sintático.
 
 ## Status do projeto
 1. Estudo do framework JFlex e construção do um analizador de léxico simples.
 2. Início das definições do analizador léxico do trabalho.
 3. Início do estudo do framework JCup.
+
+## Dificuldades encontradas
+- Superar algumas singularidades da forma como o JFlex utiliza expressões regulares para construção.
+- Definição de expressões regulares para comentários.
+- Encontrar material bem definido sobre os frameworks, principalmente o JCup.
