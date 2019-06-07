@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d89761a9-a177-4cff-8f43-319d7237ba38" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../compiladores2019/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../compiladores2019/.idea/libraries/jflex_full_1_7_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../compiladores2019/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../compiladores2019/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../compiladores2019/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../compiladores2019/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../compiladores2019/out/production/main/br/edu/ifb/compiladores/lexico/GeraLinguagem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../compiladores2019/out/production/main/br/edu/ifb/compiladores/lexico/TestaLinugagem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../compiladores2019/out/production/main/br/edu/ifb/compiladores/lexico/linguagem.lex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../compiladores2019/out/production/main/br/edu/ifb/compiladores/lexico/pascal.lex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../compiladores2019/out/production/main/br/edu/ifb/compiladores/view/Janela.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../compiladores2019/out/production/main/com/intellij/uiDesigner/core/AbstractLayout.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../compiladores2019/out/production/main/com/intellij/uiDesigner/core/DimensionInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../compiladores2019/out/production/main/com/intellij/uiDesigner/core/GridConstraints.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../compiladores2019/out/production/main/com/intellij/uiDesigner/core/GridLayoutManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../compiladores2019/out/production/main/com/intellij/uiDesigner/core/HorizontalInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../compiladores2019/out/production/main/com/intellij/uiDesigner/core/LayoutState.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../compiladores2019/out/production/main/com/intellij/uiDesigner/core/Spacer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../compiladores2019/out/production/main/com/intellij/uiDesigner/core/SupportCode$TextWithMnemonic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../compiladores2019/out/production/main/com/intellij/uiDesigner/core/SupportCode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../compiladores2019/out/production/main/com/intellij/uiDesigner/core/Util.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../compiladores2019/out/production/main/com/intellij/uiDesigner/core/VerticalInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../compiladores2019/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../compiladores2019/src/main/java/br/edu/ifb/compiladores/lexico/GeraLinguagem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../compiladores2019/src/main/java/br/edu/ifb/compiladores/lexico/Lexico.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../compiladores2019/src/main/java/br/edu/ifb/compiladores/lexico/TestaLinugagem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../compiladores2019/src/main/java/br/edu/ifb/compiladores/lexico/linguagem.lex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../compiladores2019/src/main/java/br/edu/ifb/compiladores/lexico/pascal.lex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../compiladores2019/src/main/java/br/edu/ifb/compiladores/projetoFinal/Janela.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../compiladores2019/src/main/java/br/edu/ifb/compiladores/projetoFinal/Janela.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../compiladores2019/src/main/java/br/edu/ifb/compiladores/projetoFinal/Token.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../compiladores2019/src/main/java/br/edu/ifb/compiladores/projetoFinal/projeto.cup" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../compiladores2019/src/main/java/br/edu/ifb/compiladores/projetoFinal/projeto.flex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../compiladores2019/src/main/java/br/edu/ifb/compiladores/testeLexico/GeraLinguagem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../compiladores2019/src/main/java/br/edu/ifb/compiladores/testeLexico/Lexico.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../compiladores2019/src/main/java/br/edu/ifb/compiladores/testeLexico/TestaLinugagem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../compiladores2019/src/main/java/br/edu/ifb/compiladores/testeLexico/linguagem.lex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../compiladores2019/src/main/java/br/edu/ifb/compiladores/testeLexico/pascal.lex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../compiladores2019/src/main/java/br/edu/ifb/compiladores/view/Janela.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../compiladores2019/src/main/java/br/edu/ifb/compiladores/view/Janela.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../compiladores2019/src/main/main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../compiladores2019/target/classes/META-INF/compiladores2019.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../compiladores2019/target/classes/br/edu/ifb/compiladores/lexico/GeraLinguagem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../compiladores2019/target/classes/br/edu/ifb/compiladores/lexico/Lexico.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../compiladores2019/target/classes/br/edu/ifb/compiladores/lexico/TestaLinugagem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../compiladores2019/target/classes/br/edu/ifb/compiladores/view/Janela.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../compiladores2019/target/classes/com/intellij/uiDesigner/core/AbstractLayout.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../compiladores2019/target/classes/com/intellij/uiDesigner/core/DimensionInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../compiladores2019/target/classes/com/intellij/uiDesigner/core/GridConstraints.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../compiladores2019/target/classes/com/intellij/uiDesigner/core/GridLayoutManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../compiladores2019/target/classes/com/intellij/uiDesigner/core/HorizontalInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../compiladores2019/target/classes/com/intellij/uiDesigner/core/LayoutState.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../compiladores2019/target/classes/com/intellij/uiDesigner/core/Spacer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../compiladores2019/target/classes/com/intellij/uiDesigner/core/SupportCode$TextWithMnemonic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../compiladores2019/target/classes/com/intellij/uiDesigner/core/SupportCode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../compiladores2019/target/classes/com/intellij/uiDesigner/core/Util.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../compiladores2019/target/classes/com/intellij/uiDesigner/core/VerticalInfo.class" beforeDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="Favoritos">
+      <favorite_root url="file://$PROJECT_DIR$" module="compiladores" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+        <favorite_root url="file://$PROJECT_DIR$/src" module="compiladores" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+          <favorite_root url="file://$PROJECT_DIR$/src/br" module="compiladores" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/src/br/edu" module="compiladores" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+              <favorite_root url="file://$PROJECT_DIR$/src/br/edu/ifb" module="compiladores" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+                <favorite_root url="file://$PROJECT_DIR$/src/br/edu/ifb/compiladores" module="compiladores" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+                  <favorite_root url="file://$PROJECT_DIR$/src/br/edu/ifb/compiladores/Testa.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/src/br/edu/ifb/compiladores/projeto.cup" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/src/br/edu/ifb/compiladores/exemplo1.txt" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/src/br/edu/ifb/compiladores/exemplo2.txt" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/src/br/edu/ifb/compiladores/exemplo3.txt" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/src/br/edu/ifb/compiladores/projeto.flex" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/src/br/edu/ifb/compiladores/ProjetoFinal.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/src/br/edu/ifb/compiladores/GeraLinguagem.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/src/br/edu/ifb/compiladores/projeto_macros.flex" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                </favorite_root>
+              </favorite_root>
+            </favorite_root>
+          </favorite_root>
+        </favorite_root>
+        <favorite_root url="file://$PROJECT_DIR$/.idea" module="compiladores" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+          <favorite_root url="file://$PROJECT_DIR$/.idea/.name" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/.idea/misc.xml" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/.idea/libraries" module="compiladores" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/.idea/libraries/jflex_full_1_7_0.xml" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          </favorite_root>
+          <favorite_root url="file://$PROJECT_DIR$/.idea/modules.xml" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/.idea/workspace.xml" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/.idea/uiDesigner.xml" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        </favorite_root>
+        <favorite_root url="file://$PROJECT_DIR$/compiladores.iml" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+      </favorite_root>
+    </favorites_list>
+  </component>
+  <component name="FileEditorManager">
+    <splitter split-orientation="horizontal" split-proportion="0.49241275">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/br/edu/ifb/compiladores/lexico/GeraLinguagem.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="220">
+                  <caret line="12" selection-start-line="12" selection-end-line="12" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/br/edu/ifb/compiladores/Testa.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="240">
+                  <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/br/edu/ifb/compiladores/lexico/projeto.flex">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="240">
+                  <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/br/edu/ifb/compiladores/lexico/projeto.flex">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="135">
+                  <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/br/edu/ifb/compiladores/GeraLinguagem2.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/edu/ifb/compiladores/GeraLinguagem.java" />
+        <option value="$PROJECT_DIR$/src/br/edu/ifb/compiladores/GeraLinguagem.java" />
+        <option value="$PROJECT_DIR$/src/br/edu/ifb/compiladores/TestaLinugagem.java" />
+        <option value="$PROJECT_DIR$/src/br/edu/ifb/compiladores/TestaLinguagem.java" />
+        <option value="$PROJECT_DIR$/src/br/edu/ifb/compiladores/Testa.java" />
+        <option value="$PROJECT_DIR$/src/br/edu/ifb/compiladores/ProjetoFinal.java" />
+        <option value="$PROJECT_DIR$/src/br/edu/ifb/compiladores/exemplo1.txt" />
+        <option value="$PROJECT_DIR$/src/br/edu/ifb/compiladores/projeto.flex" />
+        <option value="$PROJECT_DIR$/src/br/edu/ifb/compiladores/lexico/ProjetoFinal.java" />
+        <option value="$PROJECT_DIR$/src/br/edu/ifb/compiladores/lexico/projeto.flex" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="10" />
+    <option name="y" value="50" />
+    <option name="width" value="1346" />
+    <option name="height" value="698" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <flattenPackages ProjectPane="false" />
+      <sortByType ProjectPane="true" />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="compiladores" type="b2602c69:ProjectViewProjectNode" />
+              <item name="projeto" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="compiladores" type="b2602c69:ProjectViewProjectNode" />
+              <item name="projeto" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="compiladores" type="b2602c69:ProjectViewProjectNode" />
+              <item name="projeto" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="compiladores" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="compiladores" type="b2602c69:ProjectViewProjectNode" />
+              <item name="projeto" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="lexico" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="PsiViewer.ProjectComponent">
+    <option name="HIGHLIGHT" value="false" />
+    <option name="FILTER_WHITESPACE" value="false" />
+    <option name="SHOW_PROPERTIES" value="true" />
+    <option name="SPLIT_DIVIDER_POSITION" value="300" />
+    <option name="AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="AUTOSCROLL_FROM_SOURCE" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Documentos\Git\ifb-compiladores\projeto\src\br\edu\ifb\compiladores\lexico" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/br/edu/ifb/compiladores" />
+      <recent name="$PROJECT_DIR$/.." />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.Testa">
+    <configuration name="GeraLinguagem" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="br.edu.ifb.compiladores.GeraLinguagem" />
+      <module name="compiladores" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Testa" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="br.edu.ifb.compiladores.Testa" />
+      <module name="compiladores" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.GeraLinguagem" />
+      <item itemvalue="Application.Testa" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Testa" />
+        <item itemvalue="Application.GeraLinguagem" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d89761a9-a177-4cff-8f43-319d7237ba38" name="Default Changelist" comment="" />
+      <created>1559869536898</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1559869536898</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="22" width="1382" height="754" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49918962" visible="true" weight="0.21785174" />
+      <window_info id="Structure" order="1" sideWeight="0.5008104" side_tool="true" weight="0.24962063" />
+      <window_info id="Designer" order="2" />
+      <window_info id="UI Designer" order="3" />
+      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3808752" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.35656402" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3987034" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32901135" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32901135" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="PsiViewer" order="4" />
+      <window_info anchor="right" id="Maven" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+    </layout>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/edu/ifb/compiladores/GeraLinguagem2.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/edu/ifb/compiladores/GeraLinguagem.java" />
+    <entry file="jar://$PROJECT_DIR$/../jflex-full-1.7.0.jar!/jflex/Main.class">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/edu/ifb/compiladores/TestaLinguagem.java" />
+    <entry file="file://$PROJECT_DIR$/src/br/edu/ifb/compiladores/TestaLinugagem.java" />
+    <entry file="file://$PROJECT_DIR$/src/br/edu/ifb/compiladores/lexico/projeto_macros.flex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-450" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/edu/ifb/compiladores/exemplo1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/edu/ifb/compiladores/lexico/GeraLinguagem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/edu/ifb/compiladores/Testa.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/edu/ifb/compiladores/lexico/ProjetoFinal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="740" column="14" selection-start-line="740" selection-start-column="14" selection-end-line="740" selection-end-column="14" />
+          <folding>
+            <element signature="e#10776#10777#0" expanded="true" />
+            <element signature="e#10804#10805#0" expanded="true" />
+            <element signature="e#14516#14517#0" expanded="true" />
+            <element signature="e#14547#14548#0" expanded="true" />
+            <element signature="e#14685#14686#0" expanded="true" />
+            <element signature="e#14720#14721#0" expanded="true" />
+            <element signature="e#14832#14833#0" expanded="true" />
+            <element signature="e#14909#14910#0" expanded="true" />
+            <element signature="e#15267#15268#0" expanded="true" />
+            <element signature="e#15309#15310#0" expanded="true" />
+            <element signature="e#15407#15408#0" expanded="true" />
+            <element signature="e#15447#15448#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/edu/ifb/compiladores/lexico/projeto.flex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>compiladores</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>12</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>java-cup-11a</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
