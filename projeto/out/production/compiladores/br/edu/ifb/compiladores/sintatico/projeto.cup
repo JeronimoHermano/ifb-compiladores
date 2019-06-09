@@ -1,0 +1,157 @@
+package br.edu.ifb.compiladores.sintatico;
+
+import java_cup.runtime.*;
+import java.util.*;
+import java.io.*;
+
+
+parser code {:
+    public void report_error(String message, Object info){
+        System.err.println("# Warning: " + message);
+        System.err.println(
+            "Token: " + Sym.terminalNames[((Symbol) info).sym] +
+            " na linha "+((Symbol) info).left +
+            " e na coluna "+((Symbol)info).right
+        );
+    }
+
+    public void report_fatal_error(String message, Object info){
+        System.err.println("# Error: " + message);
+        System.err.println("Error - " + message + " - Token - " + Sym.terminalNames[((Symbol) info).sym] +" na linha "+((Symbol) info).left+" e na coluna "+((Symbol)info).right);
+        System.exit(-1);
+    }
+:};
+
+/********************************* TERMINAIS *********************************/
+// palavras reservadas
+//terminal PROGRAM;
+terminal IF, ELSE, WHILE, RETURN, FLOAT_T, CHAR_T, PRNT, INTEIRO_T, PROC,
+         VAR, SETOP; //VOID
+// operadores lógicos
+terminal NOT, AND, OR, MENOR, MENOR_IGUAL, MAIOR, MAIOR_IGUAL, IGUAL, DIFERENTE;
+// operadores aritiméticos
+terminal ADD, SUB, MUL, DIV, PORCENTO;
+// Símbolos
+terminal PARENTESE_D, PARENTESE_E, CHAVE_D, CHAVE_E, VIRGULA, PONTO_VIRGULA;
+// dados
+terminal INTEIRO, FLOAT, CHAR, VOID;
+// Identificador
+terminal ID;
+
+/******************************* NÃO TERMINAIS *******************************/
+non terminal programa, decl_global, decl_variavel, decl_funcao, lista_idents,
+             tipo, nome_args, param_formais, bloco, lista_comandos, comando,
+             atribuicao, iteracao, decisao, escrita, retorno, chamada_func_cmd,
+             expressao, lista_exprs,chamada_func, expr_basica;
+
+/******************************* PRECEDENCIAS ********************************/
+precedence nonassoc ELSE;
+precedence left OR, AND;
+precedence left IGUAL, DIFERENTE, MENOR, MAIOR, MENOR_IGUAL, MAIOR_IGUAL;
+precedence left ADD, SUB;
+precedence left MUL, DIV, PORCENTO;
+precedence left NOT;
+
+/********************************* PRODUÇÕES *********************************/
+// indica o início do programa
+start with programa;
+
+programa ::= decl_global
+           //| programa decl_global
+           | /* vazio */
+           ;
+
+decl_global ::= decl_funcao
+              | decl_variavel
+              | decl_global decl_funcao
+              | decl_global decl_variavel
+              ;
+
+decl_variavel ::= VAR lista_idents SUB tipo PONTO_VIRGULA;
+
+lista_idents ::= ID
+               | lista_idents VIRGULA ID
+               |
+               ;
+
+tipo ::= INTEIRO_T
+       | CHAR_T
+       | FLOAT_T;
+
+decl_funcao ::= PROC nome_args SUB tipo bloco
+              | PROC nome_args bloco
+              ;
+
+nome_args ::= ID PARENTESE_E param_formais PARENTESE_D
+            | nome_args ID PARENTESE_E param_formais PARENTESE_D
+//            | ID PARENTESE_E PARENTESE_D
+//            | nome_args ID PARENTESE_E PARENTESE_D
+            ;
+
+param_formais ::= ID SUB tipo
+                | param_formais VIRGULA ID SUB tipo
+                | /* vazio */
+                ;
+
+bloco ::= CHAVE_E lista_comandos CHAVE_D;
+
+lista_comandos ::= comando
+                 | lista_comandos comando;
+                 //|;
+
+comando ::= decl_variavel
+          | atribuicao
+          | iteracao
+          | decisao
+          | escrita
+          | retorno
+          | bloco
+          | chamada_func_cmd
+          ;
+
+atribuicao ::= ID SETOP expressao PONTO_VIRGULA;
+
+iteracao ::= WHILE PARENTESE_E expressao PARENTESE_D comando;
+
+decisao ::= IF PARENTESE_E expressao PARENTESE_D comando ELSE comando
+          | IF PARENTESE_E expressao PARENTESE_D comando;
+
+escrita ::= PRNT PARENTESE_E lista_exprs PARENTESE_D PONTO_VIRGULA
+          | PRNT PARENTESE_E PARENTESE_D PONTO_VIRGULA;
+
+chamada_func_cmd ::= chamada_func PONTO_VIRGULA;
+
+retorno ::= RETURN expressao PONTO_VIRGULA;
+
+chamada_func ::= ID PARENTESE_E lista_exprs PARENTESE_D
+               | chamada_func ID PARENTESE_E lista_exprs PARENTESE_D;
+
+lista_exprs ::= lista_exprs VIRGULA expressao
+              | expressao
+              ;
+
+expressao ::= expressao ADD expressao
+            | expressao SUB expressao
+            | expressao MUL expressao
+            | expressao DIV expressao
+            | expressao PORCENTO expressao
+            | expressao AND expressao
+            | expressao OR expressao
+            | expressao IGUAL expressao
+            | expressao DIFERENTE expressao
+            | expressao MENOR expressao
+            | expressao MENOR_IGUAL expressao
+            | expressao MAIOR expressao
+            | expressao MAIOR_IGUAL expressao
+            | expr_basica
+            ;
+
+expr_basica ::= PARENTESE_E expressao PARENTESE_D
+              | NOT expr_basica
+              | SUB expr_basica
+              | INTEIRO
+              | CHAR
+              | FLOAT
+              | ID
+              | chamada_func
+              ;

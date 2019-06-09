@@ -8,7 +8,7 @@ proc main(){
 
 	nRebuilt := (n/2)*2;
 
-	if (n = n_Rebuilt)
+	if (n = nRebuilt)
 		prnt('P','A','R');
 	else
 		prnt('I','M','P','A','R');

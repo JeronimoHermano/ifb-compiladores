@@ -1,12 +1,15 @@
-package br.edu.ifb.compiladores;
+package br.edu.ifb.compiladores.lexico;
 
-import java_cup.runtime.*;
-//import sun.jvm.hotspot.debugger.cdbg.Sym;
+import java_cup.runtime.Symbol;
+//import java_cup.sym;
+import br.edu.ifb.compiladores.sintatico.Sym;
 
 %%
+
 // nome da classe gerada
-%class ProjetoLexico
 %public
+%class Lexico
+%type Symbol
 %unicode
 // captura a linha e coluna do token
 %line
@@ -14,45 +17,57 @@ import java_cup.runtime.*;
 // indica compatibilidade com o cup (analisador sintático)
 %cup
 
+// Funções que serão utilizadas na leitura dos tokens
 %{
     // Guarda informações do token simples
-    private void symbol(String type){
-        return new Symbol(type, yyline, yycolumn);
+    private Symbol symbol(Integer type){
+        return new Symbol(type, yyline+1, yycolumn+1);
+    }
+    // Guarda informações do token que possui valor
+    private Symbol symbol(Integer type, Object value){
+        return new Symbol(type, yyline+1, yycolumn+1, value);
     }
     // Mensagem de erro
     private void error(){
-        throw  new Error("Caracter invalido: "+ytext()+" na linha "+(yyline+1 + " e na coluna "+yycolumn+1);
+        throw new Error("Caracter invalido: "+yytext()+" na linha "+(yyline+1)+" e na coluna "+(yycolumn+1));
     }
 %}
 
 // Símbolos
-//WHITE = [\0|\n|\t|\r| ]
-OP_REL = <|>|<=|>=|=|<>
-OP_ATRIB = :=
-SIMBOLOS = \(|\)|\{|\}|,|;
+//BRANCO = [\0|\n|\t|\r| ]
+IGNORE = [\n|\t|\r]
+SPACE = [ ]
 
 // Símbolos
-PARL = \(
-PARR = \)
-
+PARENTESE_E = \(
+PARENTESE_D = \)
+CHAVE_E = \{
+CHAVE_D = \}
+VIRGULA = ,
+PONTO_VIRGULA = ;
 
 // Operadores
+OP_MENOR = <
+OP_MENOR_IGUAL = <=
+OP_MAIOR = >
+OP_MAIOR_IGUAL = >=
+OP_IGUAL = =
+OP_DIFERENTE = <>
+OP_ATRIBUICAO = :=
 OP_ADD = \+
 OP_SUB = -
 OP_MUL = \*
 OP_DIV = \/
-OP_PERCENT = %
+OP_PORCENTO = %
 OP_NOT = "not"
 OP_AND = "and"
 OP_OR  = "or"
 
 // Números
-INTEGER = [0-9]+
-INT_LIT = \+-{1}[0-9]+
-FLOAT = [0-9]*,[0-9]+|[0-9]+,[0-9]*
-REAL = [0-9]*,[0-9]"E"[-|\+|][0-9]+,[0-9]
+INTEIRO = 0|[1-9][0-9]*|[\+-][0-9]+                                 // inteiro com sinal
+FLOAT = [0-9]*,[0-9]+|[0-9]+,[0-9]*|[0-9]*,[0-9]"E"[+-][0-9]+,[0-9] // ponto flutuante literal
 
-// caracter literal
+// Caracter literal
 CHAR = \'[a-zA-Z_|0-9|\n|\t| |:|\(|\)|,]\'
 
 // Identificador
@@ -66,46 +81,67 @@ KW_RETURN = "return"    // retorno de função
 KW_FLOAT = "float"      // tipo ponto flutuante
 KW_CHAR = "char"        // tipo caractere
 KW_VOID = "void"        // tipo vazio
-KW_PRINT = "prnt"       // impressão
+KW_PRNT = "prnt"        // impressão
 KW_INT = "int"          // indicador de tipo inteiro
 KW_PROC = "proc"        // função
 KW_VAR = "var"          // declaração de variável
 
-// Comentários
+// Comentários - Utiliza o código hexadecimal dos caracteres que pondem estar no comentário
 COMMENT_SIMPLE = \*{2}[\x20-\xED]*[\n|\r]
 COMMENT_MULTI = >{2} [\x20-\xED|\x09-\x0D]* <{2}
-// S[imbolos ignorados
-IGNORE = [\0|\n|\t|\r| ]
 
 %%
 
 <YYINITIAL> {
-    {COMMENT_MULTI}  { symbol("comentario S");   }
-    {COMMENT_SIMPLE} { symbol("comentario M");   }
-    {KW_PROC}       { symbol("Sym.DECLARA_FUNCAO");      }
-    {KW_VAR}        { symbol("Sym.DECLARA_VARIAVEL");    }
-    {KW_IF}         { symbol("Sym.IF");                  }
-    {KW_ELSE}       { symbol("Sym.ELSE");                }
-    {KW_WHILE}      { symbol("Sym.LACO");                }
-    {KW_RETURN}     { symbol("Sym.RETORNO");             }
-    {KW_INT}        { symbol("Sym.TIPO_INT");            }
-    {KW_FLOAT}      { symbol("Sym.TIPO_FLOAT");          }
-    {KW_CHAR}       { symbol("Sym.TIPO_CHAR");           }
-    {KW_VOID}       { symbol("Sym.TIPO_VOID");           }
-    {KW_PRINT}      { symbol("Sym.PRINT");               }
-    {INTEGER}       { symbol("Sym.INTEIRO");             }
-    {INT_LIT}       { symbol("Sym.INT_LIT");             }
-    {CHAR}          { symbol("Sym.CHAR");                }
-    {FLOAT}         { symbol("Sym.FLOAT");               }
-    {REAL}          { symbol("Sym.FLOAT_LITERAL");       }
-    {ID}            { symbol("Sym.ID");                  }
-    {OP_ARI}        { symbol("Sym.ARITMETICO"); }
-    {OP_REL}        { symbol("Sym.RELACIONAL"); }
-    {OP_ATRIB}      { symbol("Sym.ATRIBUICAO"); }
-    {SIMBOLOS}      { symbol("Sym.SIMBOLO");    }
-    {IGNORE}         {}
+    // Operadores
+    {OP_MENOR}       { return symbol(Sym.MENOR);          }
+    {OP_MENOR_IGUAL} { return symbol(Sym.MENOR_IGUAL);    }
+    {OP_MAIOR}       { return symbol(Sym.MAIOR);          }
+    {OP_MAIOR_IGUAL} { return symbol(Sym.MAIOR_IGUAL);    }
+    {OP_IGUAL}       { return symbol(Sym.IGUAL);          }
+    {OP_DIFERENTE}   { return symbol(Sym.DIFERENTE);      }
+    {OP_ATRIBUICAO}  { return symbol(Sym.SETOP);          }
+    {OP_ADD}         { return symbol(Sym.ADD);            }
+    {OP_SUB}         { return symbol(Sym.SUB);            }
+    {OP_MUL}         { return symbol(Sym.MUL);            }
+    {OP_DIV}         { return symbol(Sym.DIV);            }
+    {OP_PORCENTO}    { return symbol(Sym.PORCENTO);       }
+    {OP_NOT}         { return symbol(Sym.NOT);            }
+    {OP_AND}         { return symbol(Sym.AND);            }
+    {OP_OR}          { return symbol(Sym.OR);             }
+    // Símbolos
+    {PARENTESE_D}    { return symbol(Sym.PARENTESE_D);    }
+    {PARENTESE_E}    { return symbol(Sym.PARENTESE_E);    }
+    {CHAVE_D}        { return symbol(Sym.CHAVE_D);        }
+    {CHAVE_E}        { return symbol(Sym.CHAVE_E);        }
+    {VIRGULA}        { return symbol(Sym.VIRGULA);        }
+    {PONTO_VIRGULA}  { return symbol(Sym.PONTO_VIRGULA);  }
+    // Palavras chave
+    {KW_PROC}        { return symbol(Sym.PROC);             }
+    {KW_VAR}         { return symbol(Sym.VAR);              }
+    {KW_IF}          { return symbol(Sym.IF);               }
+    {KW_ELSE}        { return symbol(Sym.ELSE);             }
+    {KW_WHILE}       { return symbol(Sym.WHILE);            }
+    {KW_RETURN}      { return symbol(Sym.RETURN);           }
+    {KW_INT}         { return symbol(Sym.INTEIRO_T);        }
+    {KW_FLOAT}       { return symbol(Sym.FLOAT_T);          }
+    {KW_CHAR}        { return symbol(Sym.CHAR_T);           }
+    {KW_VOID}        { return symbol(Sym.VOID);             }
+    {KW_PRNT}        { return symbol(Sym.PRNT);             }
+    // valores
+    {INTEIRO}        { return symbol(Sym.INTEIRO, yytext()); }
+    {CHAR}           { return symbol(Sym.CHAR, yytext());    }
+    {FLOAT}          { return symbol(Sym.FLOAT, yytext());   }
+    // Identificador
+    {ID}             { return symbol(Sym.ID); }
+    // Comentários
+    {COMMENT_MULTI}  { }
+    {COMMENT_SIMPLE} { }
+    // Itens a serem ignorados
+    {SPACE}          { }
+    {IGNORE}         { }
 }
 
-<<EOF>>     { symbol("EOF");}
+<<EOF>>     { return symbol(Sym.EOF);}
 
 [^]         { error(); }
