@@ -25,7 +25,7 @@ public class Janela {
 
     private DefaultTableModel tableModel = new DefaultTableModel(
             new Object[][]{},
-            new String[]{"Linha", "Coluna", "Token", "Valor"}
+            new String[]{"L", "C", "Token", "Valor"}
     ){
         Class[] columnTypes = new Class[]{Integer.class, Integer.class, String.class, String.class};
         public Class getColumnClass(int columnIndex){
@@ -89,11 +89,11 @@ public class Janela {
                                         .addGroup(groupLayout.createSequentialGroup()
                                                 .addComponent(pLogLexico, GroupLayout.DEFAULT_SIZE, 380, Short.MAX_VALUE)
                                                 .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
-                                                .addComponent(pLogSintatico, GroupLayout.DEFAULT_SIZE, 378, Short.MAX_VALUE))
+                                                .addComponent(pLogSintatico, GroupLayout.DEFAULT_SIZE, 380, Short.MAX_VALUE))
                                         .addGroup(groupLayout.createSequentialGroup()
-                                                .addComponent(pCode, GroupLayout.DEFAULT_SIZE, 475, Short.MAX_VALUE)
+                                                .addComponent(pCode, GroupLayout.DEFAULT_SIZE, 380, Short.MAX_VALUE)
                                                 .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(pTabela, GroupLayout.PREFERRED_SIZE, 289, GroupLayout.PREFERRED_SIZE)))
+                                                .addComponent(pTabela, GroupLayout.PREFERRED_SIZE, 380, GroupLayout.PREFERRED_SIZE)))
                                 .addContainerGap())
         );
         groupLayout.setVerticalGroup(
@@ -103,8 +103,8 @@ public class Janela {
                                 .addComponent(panel, GroupLayout.PREFERRED_SIZE, 25, GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(groupLayout.createParallelGroup(Alignment.TRAILING)
-                                        .addComponent(pTabela, GroupLayout.DEFAULT_SIZE, 402, Short.MAX_VALUE)
-                                        .addComponent(pCode, GroupLayout.DEFAULT_SIZE, 402, Short.MAX_VALUE))
+                                        .addComponent(pTabela, GroupLayout.DEFAULT_SIZE, 500, Short.MAX_VALUE)
+                                        .addComponent(pCode, GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE))
                                 .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(groupLayout.createParallelGroup(Alignment.TRAILING)
                                         .addComponent(pLogLexico, GroupLayout.PREFERRED_SIZE, 110, GroupLayout.PREFERRED_SIZE)
@@ -162,9 +162,10 @@ public class Janela {
         tToken = new JTable();
 
         tToken.setModel(tableModel);
-        tToken.getColumnModel().getColumn(0).setPreferredWidth(30);
-        tToken.getColumnModel().getColumn(0).setMinWidth(30);
-        tToken.getColumnModel().getColumn(1).setPreferredWidth(40);
+//        tToken.getColumnModel().getColumn(0).setPreferredWidth(10);
+        tToken.getColumnModel().getColumn(0).setMaxWidth(30);
+//        tToken.getColumnModel().getColumn(1).setPreferredWidth(10);
+        tToken.getColumnModel().getColumn(1).setMaxWidth(30);
         tToken.getColumnModel().getColumn(2).setPreferredWidth(100);
 
         spTabela.setViewportView(tToken);

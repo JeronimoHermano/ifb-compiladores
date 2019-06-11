@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/br/edu/ifb/compiladores/view/Janela.java" line="193" />
-    <bookmark url="file://$PROJECT_DIR$/src/br/edu/ifb/compiladores/view/Janela.java" line="217" />
-    <bookmark url="file://$PROJECT_DIR$/src/br/edu/ifb/compiladores/lexico/Lexico.java" line="643" />
+    <bookmark url="file://$PROJECT_DIR$/src/br/edu/ifb/compiladores/view/Janela.java" line="194" />
+    <bookmark url="file://$PROJECT_DIR$/src/br/edu/ifb/compiladores/view/Janela.java" line="218" />
+    <bookmark url="file://$PROJECT_DIR$/src/br/edu/ifb/compiladores/lexico/Lexico.java" line="652" />
+    <bookmark url="file://$PROJECT_DIR$/src/br/edu/ifb/compiladores/view/Janela.java" line="87" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d89761a9-a177-4cff-8f43-319d7237ba38" name="Default Changelist" comment="">
@@ -113,29 +114,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/br/edu/ifb/compiladores/view/Janela.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="245" column="36" selection-start-line="245" selection-start-column="36" selection-end-line="245" selection-end-column="36" />
+            <state relative-caret-position="123">
+              <caret line="88" column="85" lean-forward="true" selection-start-line="88" selection-start-column="85" selection-end-line="88" selection-end-column="85" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/br/edu/ifb/compiladores/sintatico/Sym.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="314">
-              <caret line="84" column="22" lean-forward="true" selection-start-line="84" selection-start-column="22" selection-end-line="84" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/br/edu/ifb/compiladores/sintatico/Sintatico.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="370" column="5" lean-forward="true" selection-start-line="370" selection-start-column="5" selection-end-line="370" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -156,7 +139,7 @@
         <entry file="file://$PROJECT_DIR$/src/br/edu/ifb/compiladores/lexico/Lexico.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="137">
-              <caret line="702" column="16" selection-start-line="702" selection-start-column="16" selection-end-line="702" selection-end-column="16" />
+              <caret line="711" column="16" selection-start-line="711" selection-start-column="16" selection-end-line="711" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#11505#11506#0" expanded="true" />
@@ -176,11 +159,38 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/br/edu/ifb/compiladores/sintatico/Sintatico.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="197">
+              <caret line="370" column="5" selection-start-line="370" selection-start-column="5" selection-end-line="370" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/br/edu/ifb/compiladores/sintatico/Sym.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="314">
+              <caret line="84" column="22" selection-start-line="84" selection-start-column="22" selection-end-line="84" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/br/edu/ifb/compiladores/lexico/projeto.flex">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="279">
+              <caret line="95" column="41" lean-forward="true" selection-start-line="95" selection-start-column="41" selection-end-line="95" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/br/edu/ifb/compiladores/sintatico/projeto.cup">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="122" column="55" lean-forward="true" selection-start-line="122" selection-start-column="55" selection-end-line="122" selection-end-column="55" />
+            <state relative-caret-position="1539">
+              <caret line="104" column="25" lean-forward="true" selection-start-line="104" selection-start-column="25" selection-end-line="104" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -204,6 +214,7 @@
       <find>ID</find>
       <find>Symbol</find>
       <find>report_fatal_error</find>
+      <find>pTabela</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -235,11 +246,11 @@
         <option value="$PROJECT_DIR$/src/br/edu/ifb/compiladores/exemplo1.txt" />
         <option value="$PROJECT_DIR$/src/br/edu/ifb/compiladores/Testa.java" />
         <option value="$PROJECT_DIR$/src/br/edu/ifb/compiladores/lexico/Lexico.java" />
-        <option value="$PROJECT_DIR$/src/br/edu/ifb/compiladores/lexico/projeto.flex" />
-        <option value="$PROJECT_DIR$/src/br/edu/ifb/compiladores/view/Janela.java" />
         <option value="$PROJECT_DIR$/src/br/edu/ifb/compiladores/sintatico/Sintatico.java" />
         <option value="$PROJECT_DIR$/src/br/edu/ifb/compiladores/sintatico/projeto.cup" />
         <option value="$PROJECT_DIR$/src/br/edu/ifb/compiladores/sintatico/Sym.java" />
+        <option value="$PROJECT_DIR$/src/br/edu/ifb/compiladores/lexico/projeto.flex" />
+        <option value="$PROJECT_DIR$/src/br/edu/ifb/compiladores/view/Janela.java" />
       </list>
     </option>
   </component>
@@ -270,7 +281,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -311,6 +321,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -419,7 +430,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-3" y="30" width="1372" height="741" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8" weight="0.17572598" />
       <window_info id="Maven" order="1" sideWeight="0.5035629" side_tool="true" weight="0.1787044" />
@@ -578,27 +588,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/edu/ifb/compiladores/view/Janela.java">
+    <entry file="file://$PROJECT_DIR$/src/br/edu/ifb/compiladores/lexico/GeraLexico.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
-          <caret line="245" column="36" selection-start-line="245" selection-start-column="36" selection-end-line="245" selection-end-column="36" />
+          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/edu/ifb/compiladores/lexico/projeto.flex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1209">
-          <caret line="142" column="9" selection-start-line="142" selection-start-column="9" selection-end-line="142" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/br/edu/ifb/compiladores/lexico/Lexico.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="137">
-          <caret line="702" column="16" selection-start-line="702" selection-start-column="16" selection-end-line="702" selection-end-column="16" />
+          <caret line="711" column="16" selection-start-line="711" selection-start-column="16" selection-end-line="711" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#11505#11506#0" expanded="true" />
@@ -617,34 +620,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/edu/ifb/compiladores/sintatico/Sintatico.java">
+    <entry file="file://$PROJECT_DIR$/src/br/edu/ifb/compiladores/sintatico/Sym.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="370" column="5" lean-forward="true" selection-start-line="370" selection-start-column="5" selection-end-line="370" selection-end-column="5" />
+        <state relative-caret-position="314">
+          <caret line="84" column="22" selection-start-line="84" selection-start-column="22" selection-end-line="84" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/edu/ifb/compiladores/lexico/GeraLexico.java">
+    <entry file="file://$PROJECT_DIR$/src/br/edu/ifb/compiladores/sintatico/Sintatico.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+        <state relative-caret-position="197">
+          <caret line="370" column="5" selection-start-line="370" selection-start-column="5" selection-end-line="370" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/edu/ifb/compiladores/view/Janela.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="88" column="85" lean-forward="true" selection-start-line="88" selection-start-column="85" selection-end-line="88" selection-end-column="85" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/edu/ifb/compiladores/sintatico/Sym.java">
+    <entry file="file://$PROJECT_DIR$/src/br/edu/ifb/compiladores/lexico/projeto.flex">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="84" column="22" lean-forward="true" selection-start-line="84" selection-start-column="22" selection-end-line="84" selection-end-column="22" />
+        <state relative-caret-position="279">
+          <caret line="95" column="41" lean-forward="true" selection-start-line="95" selection-start-column="41" selection-end-line="95" selection-end-column="41" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/br/edu/ifb/compiladores/sintatico/projeto.cup">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="122" column="55" lean-forward="true" selection-start-line="122" selection-start-column="55" selection-end-line="122" selection-end-column="55" />
+        <state relative-caret-position="1539">
+          <caret line="104" column="25" lean-forward="true" selection-start-line="104" selection-start-column="25" selection-end-line="104" selection-end-column="25" />
         </state>
       </provider>
     </entry>

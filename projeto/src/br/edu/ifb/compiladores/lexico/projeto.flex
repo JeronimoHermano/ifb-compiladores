@@ -71,7 +71,7 @@ OP_OR  = "or"
 
 // Números
 INTEIRO = 0|[1-9][0-9]*|[\+-][0-9]+                                 // inteiro com sinal
-FLOAT = [0-9]*,[0-9]+|[0-9]+,[0-9]*|[0-9]*,[0-9]"E"[+-][0-9]+,[0-9] // ponto flutuante literal
+FLOAT = [0-9]*,[0-9]['E'|'e'][+-| ][0-9]+[,]{0,1}[0-9]*|[0-9]+,[0-9]*|[0-9]*,[0-9]+ // ponto flutuante literal
 
 // Caracter literal
 CHAR = \'[a-zA-Z_|0-9|\n|\t| |:|\(|\)|,]\'
@@ -99,6 +99,9 @@ COMMENT_MULTI = >{2} [\x20-\xED|\x09-\x0D]* <{2}
 %%
 
 <YYINITIAL> {
+    // Comentários
+    {COMMENT_MULTI}  { }//Janela.addTextTALexico((yyline+1) + "\t" + (yycolumn+1) + "\tCOMENTARIO MULTILINHAS"); }
+    {COMMENT_SIMPLE} { }//Janela.addTextTALexico((yyline+1) + "\t" + (yycolumn+1) + "\tCOMENTARIO SIMPLES"); }
     // Operadores
     {OP_MENOR}       { return symbol(Sym.MENOR);          }
     {OP_MENOR_IGUAL} { return symbol(Sym.MENOR_IGUAL);    }
@@ -140,9 +143,6 @@ COMMENT_MULTI = >{2} [\x20-\xED|\x09-\x0D]* <{2}
     {FLOAT}          { return symbol(Sym.FLOAT, yytext());   }
     // Identificador
     {ID}             { return symbol(Sym.ID, yytext()); }
-    // Comentários
-    {COMMENT_MULTI}  { }//Janela.addTextTALexico((yyline+1) + "\t" + (yycolumn+1) + "\tCOMENTARIO MULTILINHAS"); }
-    {COMMENT_SIMPLE} { }//Janela.addTextTALexico((yyline+1) + "\t" + (yycolumn+1) + "\tCOMENTARIO SIMPLES"); }
     // Itens a serem ignorados
     {SPACE}          { }
     {IGNORE}         { }
