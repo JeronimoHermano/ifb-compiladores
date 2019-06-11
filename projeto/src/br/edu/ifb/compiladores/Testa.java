@@ -5,13 +5,16 @@ import br.edu.ifb.compiladores.sintatico.Sintatico;
 
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.Reader;
+import java.io.StringReader;
 import java.nio.file.Paths;
 
 public class Testa {
 
-    private static void testeSintatico(String file){
+    private static void testeSintatico(Reader reader){
         try {
-            Sintatico sintatico = new Sintatico(new Lexico(new FileReader(file)));
+            Lexico lexico = new Lexico(reader);
+            Sintatico sintatico = new Sintatico(lexico);
             Object result = sintatico.parse().value;
 
             System.out.println("Compilacao concluida com sucesso...");
@@ -24,6 +27,9 @@ public class Testa {
         String path = Paths.get("").toAbsolutePath().toString()
                         + "/src/br/edu/ifb/compiladores/"
                         + "exemplo1.txt";
-        testeSintatico(path);
+
+        testeSintatico(new FileReader(path));
+
+        Reader r = new StringReader(path);
     }
 }

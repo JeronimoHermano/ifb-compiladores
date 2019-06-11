@@ -1,5 +1,6 @@
 package br.edu.ifb.compiladores.sintatico;
 
+import br.edu.ifb.compiladores.view.Janela;
 import java_cup.runtime.*;
 import java.util.*;
 import java.io.*;
@@ -8,16 +9,19 @@ import java.io.*;
 parser code {:
     public void report_error(String message, Object info){
         System.err.println("# Warning: " + message);
-        System.err.println(
-            "Token: " + Sym.terminalNames[((Symbol) info).sym] +
-            " na linha "+((Symbol) info).left +
-            " e na coluna "+((Symbol)info).right
-        );
+        System.err.println("Token: " + Sym.terminalNames[((Symbol) info).sym] +" na linha "+((Symbol) info).left +" e na coluna "+((Symbol)info).right);
+
+        Janela.addTextTASintatico("# Warning: " + message);
+        Janela.addTextTASintatico("Token: " + Sym.terminalNames[((Symbol) info).sym] + " na linha "+((Symbol) info).left + " e na coluna "+((Symbol)info).right);
     }
 
     public void report_fatal_error(String message, Object info){
+        Janela.addTextTASintatico("# Error: " + message);
+        Janela.addTextTASintatico("Token - " + Sym.terminalNames[((Symbol) info).sym] +" na linha "+((Symbol) info).left+" e na coluna "+((Symbol)info).right);
+
         System.err.println("# Error: " + message);
         System.err.println("Error - " + message + " - Token - " + Sym.terminalNames[((Symbol) info).sym] +" na linha "+((Symbol) info).left+" e na coluna "+((Symbol)info).right);
+
         System.exit(-1);
     }
 :};
@@ -61,7 +65,7 @@ programa ::= decl_global
            | /* vazio */
            ;
 
-decl_global ::= decl_funcao
+decl_global ::= decl_funcao                 {:System.out.println("chama decl_fucao"); :}
               | decl_variavel
               | decl_global decl_funcao
               | decl_global decl_variavel
@@ -71,7 +75,6 @@ decl_variavel ::= VAR lista_idents SUB tipo PONTO_VIRGULA;
 
 lista_idents ::= ID
                | lista_idents VIRGULA ID
-               |
                ;
 
 tipo ::= INTEIRO_T
@@ -124,7 +127,10 @@ chamada_func_cmd ::= chamada_func PONTO_VIRGULA;
 retorno ::= RETURN expressao PONTO_VIRGULA;
 
 chamada_func ::= ID PARENTESE_E lista_exprs PARENTESE_D
-               | chamada_func ID PARENTESE_E lista_exprs PARENTESE_D;
+               | chamada_func ID PARENTESE_E lista_exprs PARENTESE_D
+               | ID PARENTESE_E PARENTESE_D
+               | chamada_func ID PARENTESE_E PARENTESE_D
+               ;
 
 lista_exprs ::= lista_exprs VIRGULA expressao
               | expressao

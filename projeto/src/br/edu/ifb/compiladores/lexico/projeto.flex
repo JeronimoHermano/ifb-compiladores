@@ -3,6 +3,7 @@ package br.edu.ifb.compiladores.lexico;
 import java_cup.runtime.Symbol;
 //import java_cup.sym;
 import br.edu.ifb.compiladores.sintatico.Sym;
+import br.edu.ifb.compiladores.view.Janela;
 
 %%
 
@@ -21,14 +22,19 @@ import br.edu.ifb.compiladores.sintatico.Sym;
 %{
     // Guarda informações do token simples
     private Symbol symbol(Integer type){
-        return new Symbol(type, yyline+1, yycolumn+1);
+      Symbol s = new Symbol(type, yyline+1, yycolumn+1);
+//      Janela.addTextTALexico(s.left + "\t" + s.right + "\t" + Sym.terminalNames[s.sym]);
+      return s;
     }
     // Guarda informações do token que possui valor
     private Symbol symbol(Integer type, Object value){
-        return new Symbol(type, yyline+1, yycolumn+1, value);
+      Symbol s = new Symbol(type, yyline+1, yycolumn+1, value);
+//      Janela.addTextTALexico(s.left + "\t" + s.right + "\t" + Sym.terminalNames[s.sym]);
+      return s;
     }
     // Mensagem de erro
     private void error(){
+        Janela.addTextTALexico("<<###>> Caracter invalido: "+yytext()+" em ["+(yyline+1)+", "+(yycolumn+1)+"]");
         throw new Error("Caracter invalido: "+yytext()+" na linha "+(yyline+1)+" e na coluna "+(yycolumn+1));
     }
 %}
@@ -133,15 +139,15 @@ COMMENT_MULTI = >{2} [\x20-\xED|\x09-\x0D]* <{2}
     {CHAR}           { return symbol(Sym.CHAR, yytext());    }
     {FLOAT}          { return symbol(Sym.FLOAT, yytext());   }
     // Identificador
-    {ID}             { return symbol(Sym.ID); }
+    {ID}             { return symbol(Sym.ID, yytext()); }
     // Comentários
-    {COMMENT_MULTI}  { }
-    {COMMENT_SIMPLE} { }
+    {COMMENT_MULTI}  { }//Janela.addTextTALexico((yyline+1) + "\t" + (yycolumn+1) + "\tCOMENTARIO MULTILINHAS"); }
+    {COMMENT_SIMPLE} { }//Janela.addTextTALexico((yyline+1) + "\t" + (yycolumn+1) + "\tCOMENTARIO SIMPLES"); }
     // Itens a serem ignorados
     {SPACE}          { }
     {IGNORE}         { }
 }
 
-<<EOF>>     { return symbol(Sym.EOF);}
+<<EOF>>     { Janela.addTextTALexico("WHOOOOSH!!! NENHUM ERRO LEXICO ENCONTRADO!"); return symbol(Sym.EOF); }
 
 [^]         { error(); }
